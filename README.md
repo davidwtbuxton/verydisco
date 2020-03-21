@@ -19,7 +19,7 @@ Now you can use Verydisco to generate Pydantic models for resources described in
 Tests
 -----
 
-Install nox and run tests:
+Tests are configured to run with Python versions 3.7 and 3.8. Install nox and run tests:
 
     $ pip install nox
     $ nox
