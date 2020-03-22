@@ -2,7 +2,6 @@ import json
 import urllib.parse
 import urllib.request
 
-
 URL_SCHEMES = ("http", "https")
 
 

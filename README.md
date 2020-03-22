@@ -23,3 +23,8 @@ Tests are configured to run with Python versions 3.7 and 3.8. Install nox and ru
 
     $ pip install nox
     $ nox
+
+If you get a linting error, format your code with yapf:
+
+    $ pip install yapf
+    $ yapf --recursive src tests

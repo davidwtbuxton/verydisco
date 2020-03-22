@@ -129,7 +129,8 @@ class SchemaParser:
 
         return name
 
-    def parse_property(self, schema: dict, name: str) -> Tuple[str, Optional[str]]:
+    def parse_property(self, schema: dict,
+                       name: str) -> Tuple[str, Optional[str]]:
         """Return the type (as a string) and default value (as string or None)."""
         # Easy case.
         try:

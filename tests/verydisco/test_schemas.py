@@ -11,7 +11,9 @@ class TestSchemaAsString:
         data = {
             "ModelName": {
                 "properties": {
-                    "foo": {"type": "string"},
+                    "foo": {
+                        "type": "string",
+                    },
                 },
                 "type": "object",
             },
@@ -29,7 +31,9 @@ class TestSchemaAsString:
         data = {
             "ModelName": {
                 "properties": {
-                    "foo": {"type": "boolean"},
+                    "foo": {
+                        "type": "boolean",
+                    },
                 },
                 "type": "object",
             },
@@ -69,7 +73,9 @@ class TestSchemaAsString:
             "ModelName": {
                 "description": "A ModelName instance.",
                 "properties": {
-                    "foo": {"type": "string"},
+                    "foo": {
+                        "type": "string",
+                    },
                 },
                 "type": "object",
             },
@@ -89,7 +95,9 @@ class TestSchemaAsString:
             "ModelName": {
                 "description": "A ModelName instance." * 4,
                 "properties": {
-                    "foo": {"type": "string"},
+                    "foo": {
+                        "type": "string",
+                    },
                 },
                 "type": "object",
             },
@@ -133,7 +141,9 @@ class TestSchemaAsString:
                 "properties": {
                     "foo": {
                         "properties": {
-                            "bar": {"type": "string"},
+                            "bar": {
+                                "type": "string",
+                            },
                         },
                         "type": "object",
                     },
@@ -144,11 +154,13 @@ class TestSchemaAsString:
         parser = schemas.SchemaParser(data)
         result = parser.model_defs
         expected = {
-            "ModelName": textwrap.dedent('''
+            "ModelName":
+            textwrap.dedent('''
                 class ModelName(pydantic.BaseModel):
                     foo: "_foo"
             ''').lstrip(),
-            "_foo": textwrap.dedent('''
+            "_foo":
+            textwrap.dedent('''
                 class _foo(pydantic.BaseModel):
                     bar: str
             ''').lstrip(),
@@ -235,7 +247,9 @@ class TestBuildModels:
                 "properties": {
                     "foo": {
                         "properties": {
-                            "bar": {"type": "string"},
+                            "bar": {
+                                "type": "string",
+                            },
                         },
                         "type": "object",
                     },
